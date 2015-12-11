@@ -1,0 +1,17 @@
+gfdupes - Graphical interface for fdupes (find duplicates) command in linux
+
+Currently the tool has been tested on Ubuntu >=14.04 only. The install.sh script is likewise.
+
+How to execute :
+Install the provided script. Run gfdupes
+
+Requirements :
+Python (>=2.0), pygtk( >=2.0), gtk, fdupes
+
+TO-DO :
+The code is hurriedly written, and we did not take care of many things :
+- Every file is stored as a dictionary entry in python, with its path. Thus 2 files with same names but different paths, this case is not dealt with.
+- The tree structure of directories is made completely beforehand, i.e., those directories which won't even be opened by the user, have their subtrees or children within. This needs to be removed. We need to create a subtree for a directory only when the arrow besides it is clicked.
+- For some reason, if a filename contains spaces within it, the program does not work
+- As mentioned earlier, the code is hurriedly written. It is not object oriented. We did not add seperate classes for Hboxes, Vboxes, etc.
+- Need to test this on other distributions.
