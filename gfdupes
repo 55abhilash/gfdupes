@@ -38,7 +38,7 @@ tree_elem_path_dict = dict()
 def search_path_of_element(elem):
 	return tree_elem_path_dict.get(elem)
 
-def append_all_recur(tree, app, path): 
+def append_children(tree, app, path): 
 	if(not (os.path.isdir(path))) :              
 		return False
 	files2 = os.listdir(path)
@@ -80,7 +80,7 @@ for parent in range(no_of_files):
 	path = '%s/%s' %(home, files[parent])
 	tree_elem_path_dict[files[parent]] = path
 	if(os.path.isdir('%s/%s' %(home, files[parent]))) :
-		append_all_recur(t, up, path)
+		append_children(t, up, path)
 
 print(tree_elem_path_dict)
 # Contents of tree end here
