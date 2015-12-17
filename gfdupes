@@ -46,7 +46,7 @@ def append_children(tree, app, path):
 		x = tree.append(app, [files_list[child]])
 		pat = '/%s/%s' %(path, files_list[child])
 		tree_elem_path_dict[files_list[child]] = pat
-		append_all_recur(tree,x,pat)
+		append_children(tree,x,pat)
 #This code works!
 x = False
 def toggle_check_button(widget, data = None):	
