@@ -49,7 +49,7 @@ def append_all_recur(tree, app, path):
 		tree_elem_path_dict[files2[child]] = pat
 #This code works!
 x = False
-def toggle_check_button(widget, data = None):	#..........................................................................
+def toggle_check_button(widget, data = None):	
 	global x	
 	if widget.get_active() == True :
 		x = True
@@ -59,17 +59,16 @@ def toggle_check_button(widget, data = None):	#.................................
 	
 
 w = gtk.Window(gtk.WINDOW_TOPLEVEL) # Initialize window
-w.set_title("gfdupes")	#.....................................................................................
-w.set_border_width(20) #.........................................................................................
-v2 = gtk.VBox(False, 0)#............................................................................
-checkbutton = gtk.CheckButton("Recurse")#..................................
-#w.add(v2)#................................................
+w.set_title("gfdupes")	
+w.set_border_width(20) 
+v2 = gtk.VBox(False, 0)
+checkbutton = gtk.CheckButton("Recurse")
 
-checkbutton.connect("toggled", toggle_check_button, "Recurse")#...........................
-v2.pack_start(checkbutton, False, True, 0)#............................................
-checkbutton.show()#.............................................
+checkbutton.connect("toggled", toggle_check_button, "Recurse")
+v2.pack_start(checkbutton, False, True, 0)
+checkbutton.show()
 
-v2.show()#..................................................
+v2.show()
 t = gtk.TreeStore(str) # Initialize tree store
 
 home = os.path.expanduser("~")
@@ -129,7 +128,7 @@ def list_dups(pathlist) :
 		print type(fdup_out)
 		#fdup_list = fdup_out.split('\n')
 		fdup_list = fdup_list + fdup_out.split('\n')
-		#.............................................................--------------------....>code to remove dup. elements from fdup_list
+		
 sel_list_path = []	
 def on_Selection_Changed_List(list_selection) : 
 	global sel_list_path	
@@ -177,8 +176,6 @@ list_selection = treeview1.get_selection()
 list_selection.set_mode(gtk.SELECTION_MULTIPLE)
 list_selection.connect("changed", on_Selection_Changed_List)
 
-#column2 = gtk.TreeViewColumn('Abhilash', renderer, text=0)
-#treeview1.append_column(column2)
 
 scrolled_window1 = gtk.ScrolledWindow(None, None)
 scrolled_window1.add(treeview1)
@@ -201,7 +198,7 @@ h.pack_start(vbox3,True,True,0)
 h.pack_start(v,False,True,0)
 w.add(h)
 
-h.pack_end(v2, False, True, 0)#..............................................
+h.pack_end(v2, False, True, 0)
 
 w.connect("delete_event", delete_event)
 w.connect("destroy",destroy)
