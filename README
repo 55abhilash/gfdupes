@@ -15,3 +15,5 @@ The code is hurriedly written, and we did not take care of many things :
 - For some reason, if a filename contains spaces within it, the program does not work
 - As mentioned earlier, the code is hurriedly written. It is not object oriented. We did not add seperate classes for Hboxes, Vboxes, etc.
 - Need to test this on other distributions.
+- The VBox showing the tree structure is very big in size and consumes lot of redundant space on the screen. Decrease the size.
+- Package for debian (after all of the above are done)
