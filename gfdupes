@@ -75,8 +75,9 @@ home = os.path.expanduser("~")
 files = os.listdir('%s' %home) 
 no_of_files = len(files)
 
+home_elem = t.append(None, home)
 for parent in range(no_of_files):		
-	up = t.append(None, [files[parent]])
+	up = t.append(home_elem, [files[parent]]) #Display the name of home folder
 	path = '%s/%s' %(home, files[parent])
 	tree_elem_path_dict[files[parent]] = path
 	if(os.path.isdir('%s/%s' %(home, files[parent]))) :
