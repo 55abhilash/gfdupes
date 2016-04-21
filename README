@@ -1,6 +1,6 @@
 gfdupes - Graphical interface for fdupes (find duplicates) command in linux
 
-Currently the tool has been tested on Debian >=14.04 only. The install.sh script is likewise.
+Currently the tool has been tested on Kali >=14.04 only. The install.sh script is likewise.
 
 How to execute :
 Install the provided script. Run gfdupes
